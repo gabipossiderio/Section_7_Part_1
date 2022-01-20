@@ -1,11 +1,16 @@
 import random
 
-ascending_order_list = []
+ascending_order = []
+descending_order = []
 
-print('Please, enter 10 numbers.')
+for i in range(6):
+    ascending_order.append(random.randrange(0, 100))
+    ascending_order.sort()
 
-for i in range(10):
-    ascending_order_list.append(int(input(f'Number {i + 1}/10: ')))
-    ascending_order_list.sort()
+for i in range(5):
+    descending_order.append(random.randrange(0, 100))
+    descending_order.sort(reverse=True)
 
-print(ascending_order_list)
+
+print(ascending_order + descending_order)
+
